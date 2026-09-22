@@ -538,7 +538,8 @@ describe('TreeSelect.checkable', () => {
           showCheckedStrategy={SHOW_ALL}
           labelInValue
           value={[
-            { value: 'parent', label: 'Custom parent' },
+            { value: 'parent', label: 'First parent label' },
+            { value: 'parent', label: 'Second parent label' },
             { value: 'child', label: 'Custom child' },
           ]}
         >
@@ -550,7 +551,7 @@ describe('TreeSelect.checkable', () => {
 
       expect(getSelections(container)).toHaveLength(2);
       expect([getSelectionText(container, 0), getSelectionText(container, 1)]).toEqual([
-        'Custom parent',
+        'First parent label',
         'Custom child',
       ]);
     });
